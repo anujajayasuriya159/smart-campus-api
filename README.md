@@ -123,3 +123,15 @@ Conpaired to defining all the nested paths, the sub resource locators are marked
 Answer: 
 
 The HTTP 422 is often considered to be more accurate than the standered HTTP 402 is because the HTTP 402 is used to validate a request and check does it include a unacceptable data(unacceptable room ID) and the HTTP 404 is for only validating unavailable resources  
+
+### Question 9 (Part 5)
+
+Answer:
+
+Exposing these details such as class names details can reduce the security of the system to the attackers.To prevent this exposure of internal JAVA stack traces to external API consumers a GlobalExceptionMapper was used.
+
+### Question 10 (Part 5)
+
+Answer:
+
+To reduce the code duplication and maintainability of the code itself.

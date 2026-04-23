@@ -41,7 +41,7 @@ This project(Smart Campus API) is a RESTful wed project developed by using Java 
 ```
 curl -X POST http://localhost:8080/api/v1/rooms \
 -H "Content-Type: application/json" \
--d "{\"id\":\"LAB-301\",\"name\":\"Library\",\"capacity\":50,\"sensorIds\":[]}
+-d "{\"id\":\"LAB-301\",\"name\":\"Library\",\"capacity\":50,\"sensorIds\":[]}"
 ```
 
 ### 2. Getting All the Rooms
@@ -80,7 +80,7 @@ curl -X POST http://localhost:8080/api/v1/sensors/TEMP-001/readings \
 
 Answer:
 
-In JAX-RS a new session is created for each individual HTTP request because in JAX-RS it automatically creates classes with every HTTP request. As a result of this, it optimizes the the concurrency safety.
+In JAX-RS a new instance is created for each individual HTTP request because in JAX-RS it automatically creates classes with every HTTP request. As a result of this, it optimizes the the concurrency safety(Usage of static HashMaps to save data).
 
 ### Question 2 (Part 1)
 
@@ -122,7 +122,7 @@ Conpaired to defining all the nested paths, the sub resource locators are marked
 
 Answer: 
 
-The HTTP 422 is often considered to be more accurate than the standered HTTP 402 is because the HTTP 402 is used to validate a request and check does it include a unacceptable data(unacceptable room ID) and the HTTP 404 is for only validating unavailable resources  
+The HTTP 422 is often considered to be more accurate than the standered HTTP 404 is because the HTTP 422 is used to validate a request and check does it include a unacceptable data(unacceptable room ID) and the HTTP 404 is for only validating unavailable resources  
 
 ### Question 9 (Part 5)
 
